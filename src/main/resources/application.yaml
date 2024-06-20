@@ -1,9 +1,9 @@
 #spring.application.name=api
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/api-rest
-    username: postgres
-    password: 1234
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/api-rest}
+    username: ${DATASOURCE_USERNAME:postgres}
+    password: ${DATASOURCE_PASSWORD:1234}
   jpa:
     hibernate:
       ddl-auto: update
