@@ -45,7 +45,7 @@ public class StudentServiceImpl implements StudentService {
 
     private StudentResponse mapToStudentResponse(Student student){
         var studentResponse = new StudentResponse();
-        student.setName(studentResponse.getName());
+        studentResponse.setName(student.getName());
         studentResponse.setBirthday(student.getBirthday());
         studentResponse.setCreationDate(student.getCreationDate());
         return studentResponse;
