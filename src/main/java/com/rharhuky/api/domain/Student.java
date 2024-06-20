@@ -34,11 +34,8 @@ public class Student {
     @PrePersist
     public void createRegistration(){
         this.registration = String.valueOf(System.currentTimeMillis());
-    }
-
-    @PrePersist
-    public void creationDate(){
         this.creationDate = LocalDate.now();
+
     }
 
 }
