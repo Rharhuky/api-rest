@@ -28,4 +28,17 @@ public class Student {
     @Column(name = "registration")
     private String registration;
 
+    @Column(name = "creation_date")
+    private LocalDate creationDate;
+
+    @PrePersist
+    public void createRegistration(){
+        this.registration = String.valueOf(System.currentTimeMillis());
+    }
+
+    @PrePersist
+    public void creationDate(){
+        this.creationDate = LocalDate.now();
+    }
+
 }
